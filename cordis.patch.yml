@@ -1,0 +1,5 @@
+# dsh-html-inspector bundle patch: mount the host plugin under its package
+# name, resolved through the profile's node_modules.
+- insert:
+    - id: html-inspector
+      name: 'dsh-html-inspector'

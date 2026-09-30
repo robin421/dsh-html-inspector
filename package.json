@@ -1,0 +1,58 @@
+{
+  "name": "dsh-html-inspector",
+  "version": "1.0.0",
+  "description": "Selection mode for HTML preview and browser tabs: click any element in a local demo page, and its locator (selector/text/HTML snippet) is written into the chat input for precise AI editing. / HTML 选区模式：点选本机 demo 页面元素，定位信息自动写入对话输入框",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "html",
+    "inspector",
+    "selection",
+    "element-picker",
+    "gui",
+    "preview",
+    "选区",
+    "插件"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robin421/dsh-html-inspector.git"
+  },
+  "homepage": "https://github.com/robin421/dsh-html-inspector#readme",
+  "bugs": {
+    "url": "https://github.com/robin421/dsh-html-inspector/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "immediately": true
+    }
+  }
+}
